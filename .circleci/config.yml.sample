@@ -1,0 +1,45 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5-node
+    environment:
+      - PROJECT_NAME: "static-site-boilerplate"
+      - S3_DEST_URL: s3://static-site-boilerplate
+    steps:
+      - checkout
+      - run:
+          name: install aws cli
+          command: |
+            sudo apt-get install python-pip
+            sudo pip install awscli
+      - run:
+          name: install slim gem
+          command: gem install slim compass
+      - restore_cache:
+          keys:
+            - { .Environment.PROJECT_NAME }-yarn-{{ checksum "yarn.lock" }}
+            - { .Environment.PROJECT_NAME }-yarn-
+      - run:
+          name: yarn install
+          command: yarn install
+      - save_cache:
+          key: { .Environment.PROJECT_NAME }-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: gulp build
+          command: yarn run gulp build
+      - run:
+          name: deploy s3
+          command: |
+            aws s3 sync ./dest ${S3_DEST_URL}
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master

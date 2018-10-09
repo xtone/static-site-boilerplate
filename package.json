@@ -1,0 +1,26 @@
+{
+  "name": "static-site-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-slim": "^0.3.0",
+    "rimraf": "^2.6.2",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xtone/static-site-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
