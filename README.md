@@ -12,7 +12,8 @@ slim+sassで静的サイトを開発するためのひな型となるプロジ�
 
 ## getting start
 
-- GitHub上でこのプロジェクトをcloneして新しいプロジェクトを作成します
+- このプロジェクトをcloneして新しいプロジェクトを作成します
+  - `.git`ディレクトリを削除した後、新しく`git init`を実行して新しいプロジェクトとして作成します
 - `package.json`の`name`と`repository`をプロジェクトごとに正しい値に設定します
 - `.circleci/config.yml.sample`内の環境変数を正しい値に設定し、`.circleci/config.yml`にリネームします
   - masterブランチにpushしたとき以外にデプロイ等を行いたい場合は追記します
