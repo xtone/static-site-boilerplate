@@ -1,6 +1,5 @@
 import del from 'del'
 import gulp from 'gulp'
-import gulpBabel from 'gulp-babel'
 import gulpSass from 'gulp-sass'
 import nodeSass from 'node-sass'
 import gulpStylus from 'gulp-stylus'
@@ -8,6 +7,9 @@ import gulpSlim from 'gulp-slim'
 import gulpPug from 'gulp-pug'
 import plumber from 'gulp-plumber'
 import browser from 'browser-sync'
+import webpack from 'webpack-stream'
+
+import webpackConfig from './webpack.config'
 
 const bs = browser.create()
 gulpSass.compiler = nodeSass
@@ -53,8 +55,10 @@ const pug = () => {
 const js = () => gulp.src('./src/js/**/*.js').pipe(gulp.dest('./dest/js')).pipe(bs.stream({once: true}))
 
 const es6 = () => {
-  return gulp.src('./src/js/**/*.es6')
-    .pipe(babel({ presets: ["env"] }))
+  return webpack(webpackConfig)
+    .on('error', function (e){
+      this.emit('end')
+    })
     .pipe(gulp.dest('./dest/js'))
     .pipe(bs.stream({once: true}))
 }
@@ -70,13 +74,11 @@ const watchFiles = (done) => {
   gulp.watch('./src/css/**/*.styl', stylus)
   gulp.watch('./src/html/**/*.html', html)
   gulp.watch('./src/html/**/*.pug', pug)
-  gulp.watch('./src/js/**/*.js', js)
-  gulp.watch('./src/img/**/*', images)
-  gulp.watch('./src/favicon.ico', favicon)
+  gulp.watch('./src/js/**/*.js', es6)
   done()
 }
 
-export const build = done => gulp.series(clean, gulp.parallel(css, stylus, sass, html, slim, pug, js, images))(done)
+export const build = done => gulp.series(clean, gulp.parallel(css, stylus, sass, html, slim, pug, es6, images))(done)
 
 export const watch = gulp.series(build, server, watchFiles)
 

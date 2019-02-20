@@ -8,6 +8,7 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.5",
     "browser-sync": "^2.18.8",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
@@ -18,7 +19,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-slim": "^0.3.0",
     "gulp-stylus": "^2.7.0",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "webpack-stream": "^5.2.1"
   },
   "scripts": {
     "build": "gulp build",
