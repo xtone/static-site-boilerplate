@@ -5,10 +5,8 @@
 ## prerequisite
 
 - nodejs
+  - 14系で動作確認。16でも多分大丈夫
 - yarn
-- ruby
-- slim
-  - `gem install slim`
 
 ## getting start
 
@@ -25,31 +23,33 @@
 ├── gulpfile.js
 ├── package.json
 ├── README.md
-└── src
-    ├── css
-    ├── js
-    ├── html
-    └── img
+└──c
 ```
+
+src内に配置した各ファイルと同じ構造でbuild時にdestディレクトリに書き込まれます。
+各ファイルは拡張子ごとにビルドが行われます。対応している拡張子は以下に別途記載。
 
 ## 対応フォーマット
 
 - css
   - *.css
   - *.sass
-  - *.stylus
+  - *.styl
 - html
   - *.html
-  - *.slim
   - *.pug
 - js
   - *.js
   - *.es6
+- image
+  - *.jpg
+  - *.png
+  - *.gif
 
 ## 利用方法
 
 ```
 yarn install
-yarn run gulp build   # ビルド実行
-yarn run gulp         # 開発サーバー起動
+yarn build   # ビルド実行
+yarn watch   # 開発サーバー起動
 ```
