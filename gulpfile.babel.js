@@ -74,6 +74,8 @@ const watchFiles = (done) => {
 
 export const build = done => gulp.series(clean, gulp.parallel(css, stylus, sass, html, pug, es6, images))(done)
 
-export const watch = gulp.series(build, server, watchFiles)
+const devServer = gulp.parallel(server, watchFiles)
+
+export const watch = gulp.series(build, devServer)
 
 export default watch
