@@ -23,7 +23,7 @@
 ├── gulpfile.js
 ├── package.json
 ├── README.md
-└──c
+└── src
 ```
 
 src内に配置した各ファイルと同じ構造でbuild時にdestディレクトリに書き込まれます。
