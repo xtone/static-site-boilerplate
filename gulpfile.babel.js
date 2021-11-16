@@ -54,7 +54,7 @@ const es6 = () => {
     .pipe(bs.stream({once: true}))
 }
 
-const images = () =>gulp.src('./src/**/*.[png,jpg,gif]').pipe(gulp.dest('./dest'))
+const images = () =>gulp.src('./src/**/*.{png,jpg,gif,svg,webp}').pipe(gulp.dest('./dest'))
 
 const favicon = () => gulp.src('./src/favicon.ico').pipe(gulp.dest('./dest'))
 
@@ -65,9 +65,7 @@ const watchFiles = (done) => {
   gulp.watch('./src/**/*.styl', stylus)
   gulp.watch('./src/**/*.html', html)
   gulp.watch('./src/**/*.pug', pug)
-  gulp.watch('./src/**/*.png', images)
-  gulp.watch('./src/**/*.jpg', images)
-  gulp.watch('./src/**/*.gif', images)    
+  gulp.watch('./src/**/*.{png.jpg,gif,svg,webp}', images)
   gulp.watch('./src/**/*.js', es6)
   done()
 }
