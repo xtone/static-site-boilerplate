@@ -1,5 +1,5 @@
 {
-  "name": "static-site-boilerplate",
+  "name": "tokiomarine-nichido-recruit",
   "version": "1.1.0",
   "description": "",
   "main": "gulpfile.js",
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xtone/static-site-boilerplate.git"
+    "url": "git+https://github.com/xtone/tokiomarine-nichido-recruit.git"
   },
   "keywords": [],
   "author": "",
