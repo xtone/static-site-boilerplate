@@ -1,0 +1,32 @@
+include _inc_page_top_button.pug
+
+footer.l-footer
+
+  .l-footer__list-wrap
+
+    .l-footer__main-list
+      .l-footer__main-list--course
+        p.l-footer__main-list--title 講座一覧
+        ul.l-footer__list
+          li
+            a.l-footer__link(href="/business-planner.html") ビジネス企画人材育成編
+          li
+            a.l-footer__link(href="/data-scientist.html") データサイエンティスト育成編
+
+      .l-footer__main-list--pages
+        ul.l-footer__list
+          li
+            a.l-footer__link(href="/voice.html") 受講者の声
+          li
+            a.l-footer__link(href="/media.html") メディアへの掲載実績
+          li
+            a.l-footer__link(href="/faq.html") よくあるご質問
+
+    .l-footer__sub-list
+      ul.l-footer__list
+        li
+          a.l-footer__link(href="/privacy-policy.html") プライバシーポリシー
+        li
+          a.l-footer__link(href="/cookie-policy.html") クッキーポリシー
+
+  include _inc_footer_logo_area.pug

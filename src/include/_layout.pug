@@ -1,0 +1,14 @@
+doctype html
+block vars
+html(lang="ja")
+  head
+    include _inc_head.pug
+
+  body.l-body
+    //- include _inc_header.pug
+    
+    .l-wrap
+      block contents
+
+      include _inc_contact.pug
+    //- include _inc_footer.pug

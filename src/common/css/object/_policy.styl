@@ -1,0 +1,300 @@
+.policy-section
+	margin 32px 0 44px
+	+bp(pc)
+		margin 64px 0 72px
+	> *
+		margin-bottom 16px
+		+bp(pc)
+			margin-bottom 32px
+
+.policy-section-title
+	margin-bottom 0
+	padding-bottom 32px
+	border-bottom 1px solid color-black
+	+bp(pc)
+		padding-bottom 56px
+
+.policy-right-text
+	text-align right
+
+// .policy
+// 	&__section
+// 		padding-bottom 80px
+// 		+bp(pc)
+// 			padding-bottom 120px
+// 		&:last-child
+// 			padding-bottom 0
+// 	&__summary
+// 		padding-bottom 32px
+// 		+bp(pc)
+// 			padding-bottom 40px
+// 	a
+// 		color color-blue
+// 		text-decoration underline
+// 		cursor pointer
+// 		+bp(pc)
+// 			text-decoration none
+// 		&:hover
+// 			text-decoration underline
+// 	&__intro
+// 		margin-bottom 32px
+// 		+bp(pc)
+// 			margin-bottom 40px
+
+
+// 	a.btn
+// 		margin 0 0 8px
+// 		+bp(pc)
+// 			margin 0 0 16px
+
+// 	&__text-space
+// 		p
+// 			padding-bottom 16px
+
+// 	.right
+// 		text-align right
+
+// 	.supplement
+// 		color color-text-grey
+// 		font-size 1.2rem
+// 		+bp(pc)
+// 			font-size 1.4rem
+
+// 	dl
+// 		dt
+// 			font-weight bold
+// 			font-size 2.0rem
+// 			padding-bottom 16px
+// 			+bp(pc)
+// 				font-size 2.4rem
+// 			span
+// 				font-weight normal
+// 				font-size 1.4rem
+// 				+bp(pc)
+// 					font-size 1.6rem
+// 		dd
+// 			display flex
+// 			flex-direction column
+// 			align-items flex-start
+// 			gap 16px
+// 			padding-bottom 32px
+// 			+bp(pc)
+// 				padding-bottom 40px
+
+// 	dl.normal
+// 		display flex
+// 		align-items flex-start
+// 		dt
+// 			font-weight normal
+// 			font-size 1.4rem
+// 			padding 0
+// 			flex-shrink 0
+// 			+bp(pc)
+// 				font-size 1.6rem
+// 		dd
+// 			padding 0
+
+// 	ul
+// 		li
+// 			position relative
+// 			padding-left 20px
+// 			padding-bottom 8px
+// 			+bp(pc)
+// 				padding-left 24px
+// 				padding-bottom 12px
+// 			&:last-child
+// 				padding-bottom 0
+// 			&:before
+// 				content ''
+// 				position absolute
+// 				left 8px
+// 				top 12px
+// 				width 4px
+// 				height 4px
+// 				background color-text-grey
+// 				+bp(pc)
+// 					top 14px
+
+// 	ul.link
+// 		li
+// 			&:before
+// 				background color-blue
+
+// 	ul.abc
+// 		li
+// 			padding-left 0
+// 			margin-left 20px
+// 			list-style-type lower-alpha
+// 			+bp(pc)
+// 				margin-left 24px
+// 			&:before
+// 				width 0
+// 				height 0
+// 				background none
+
+// 	ol > li
+// 		list-style-type none
+// 		counter-increment cnt
+// 		padding-left 28px
+// 		padding-bottom 8px
+// 		position relative
+// 		+bp(pc)
+// 			padding-left 32px
+// 		&:before
+// 			position absolute
+// 			left 0
+// 			content "(" counter(cnt) ") "
+// 		&:last-child
+// 			padding-bottom 0
+// 		&:nth-child(n + 10)
+// 			padding-left 38px
+// 			+bp(pc)
+// 				padding-left 42px
+				
+// 		p, a
+// 			padding-top 4px
+// 		ul
+// 			padding 8px 0
+// 			+bp(pc)
+// 				padding 12px 0
+
+// 	ol.dot-number
+// 		li
+// 			padding-left 20px
+// 			+bp(pc)
+// 				padding-left 24px
+// 				padding-bottom 16px
+// 			&:last-child
+// 				padding-bottom 0
+// 			&:before
+// 				content "" counter(cnt) ". "
+				
+// 			&:nth-child(n + 10)
+// 				padding-left 30px
+// 				+bp(pc)
+// 					padding-left 34px
+							
+// 			> ol.bracket-number
+// 				padding-top 8px
+// 				> li
+// 					list-style-type none
+// 					padding-left 28px
+// 					padding-bottom 8px
+// 					position relative
+// 					counter-reset cnt
+// 					counter-increment cnt_number
+// 					+bp(pc)
+// 						padding-left 32px
+// 					&:last-child
+// 						padding-bottom 0
+// 					&:before
+// 						position absolute
+// 						left 0
+// 						content "(" counter(cnt_number) ") "
+						
+// 					&:nth-child(n + 10)
+// 						padding-left 38px
+// 						+bp(pc)
+// 							padding-left 42px
+					
+// 					> ol.circle-number
+// 						padding-top 8px
+							
+// 						> li
+// 							counter-reset cnt_number
+// 							padding-bottom 8px
+							
+// 							&:last-child
+// 								padding-bottom 0
+// 							&:first-child
+// 								&:before
+// 									content "①"
+// 							&:nth-child(2)
+// 								&:before
+// 									content "②"
+// 							&:nth-child(3)
+// 								&:before
+// 									content "③"
+// 							&:nth-child(4)
+// 								&:before
+// 									content "④"
+// 							&:nth-child(5)
+// 								&:before
+// 									content "⑤"
+// 							&:nth-child(6)
+// 								&:before
+// 									content "⑥"
+// 							&:nth-child(7)
+// 								&:before
+// 									content "⑦"
+// 							&:nth-child(8)
+// 								&:before
+// 									content "⑧"
+// 							&:nth-child(9)
+// 								&:before
+// 									content "⑨"
+// 							&:nth-child(10)
+// 								&:before
+// 									content "⑩"
+// 				+ p
+// 					margin-top 8px
+
+// 			> ul.disc-list
+// 				padding-bottom 0
+// 				> li
+// 					counter-reset cnt
+// 					&:last-child
+// 						padding-bottom 0
+// 					&:before
+// 						content ''
+
+// 	ol.roman-number > li
+// 		counter-increment cnt1
+// 		padding-left 36px
+// 		&:last-child
+// 			padding-bottom 0
+// 		+bp(pc)
+// 			padding-left 44px
+// 			padding-bottom 16px
+// 		&:before
+// 			content "( " counter(cnt1, lower-roman) " ) "
+
+// 	table
+// 		width 100%
+// 		th, td
+// 			border-collapse collapse
+// 			border 1px solid color-border-grey
+// 			font-weight normal
+// 			&.em
+// 				background color-bg-grey
+// 		th
+// 			padding 12px
+// 			min-width 103px
+// 			+bp(pc)
+// 				padding 16px 24px
+// 				min-width 300px
+// 		td
+// 			padding 12px 16px
+// 			vertical-align middle
+// 			+bp(pc)
+// 				padding 16px 24px
+	
+// 	.table-box
+// 		table
+// 			margin-top 32px
+// 			&:first-child
+// 				margin-top 0
+// 			+bp(pc)
+// 				margin-top 40px
+
+// 	.contact-area
+// 		width 100%
+// 		padding 20px
+// 		border 1px solid color-border-grey
+// 		+bp(pc)
+// 			padding 24px
+
+
+
+
+        

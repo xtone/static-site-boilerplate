@@ -1,0 +1,45 @@
+.media-list
+  padding 10px 0
+  text-align left
+  background color-white
+  border-top 1px solid color-black
+  +bp(pc)
+    padding 20px 0
+  &--item
+    border-bottom 1px solid color-border
+  a&--link,
+  &--link
+    display flex
+    flex-direction column
+    gap 2px
+    color color-black
+    position relative
+    padding 16px 38px 16px 16px
+    +bp(pc)
+      flex-direction row
+      gap 8px
+      padding 24px 46px 24px 24px
+    &:after
+      content ""
+      position absolute
+      top 0
+      bottom 0
+      right 16px
+      margin auto
+      width 14px
+      height 14px
+      background url(/common/img/icon/small/blank_text.svg) center center no-repeat
+      background-size cover
+      transition all .3s linear
+      +bp(pc)
+        right 24px
+    &:hover
+      +bp(pc)
+        color color-blue-hover
+        transition all .3s ease
+      &:after
+        background url(/common/img/icon/small/blank_text_blue.svg) center center no-repeat
+  &--tag
+    +bp(pc)
+      min-width 280px
+

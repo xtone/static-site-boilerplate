@@ -1,0 +1,97 @@
+.voice-item
+  margin-bottom 24px
+  +bp(pc)
+    display flex
+    gap 24px
+    margin-bottom 48px
+  &--comment
+    padding 24px 5.33vw
+    margin-bottom 16px
+    background color-white
+    border 1px solid color-black
+    position relative
+    +bp(pc)
+      padding 24px 32px
+    &:before
+      content ''
+      position absolute
+      z-index 1
+      left 0
+      right 0
+      bottom -10px
+      margin auto
+      width 20px
+      height 10px
+      background url(/common/img/icon/small/arrow_comment_sp.png) top center no-repeat
+      background-size contain
+      +bp(pc)
+        left auto
+        right -20.5px
+        top 0
+        bottom 0
+        width 28px
+        height 13px
+        transform rotate(-90deg)
+        background url(/common/img/icon/small/arrow_comment_pc.png) top center no-repeat
+        background-size contain
+    h3
+      display block
+      font-weight 700
+      font-size 1.6rem
+      text-align center
+      margin-bottom 12px
+      +bp(pc)
+        font-size 1.8rem
+        text-align left
+  &--user
+    display flex
+    justify-content center
+    align-items center
+    gap 6px
+    +bp(pc)
+      flex-direction column
+      width 200px
+      flex-shrink 0
+      gap 12px
+    p
+      width 220px
+      text-align center
+      +bp(pc)
+        width 200px
+  &--user-img
+    width 100px
+    flex-shrink 0
+  &:nth-child(odd)
+    .voice-item--user
+      flex-direction row-reverse
+      +bp(pc)
+        flex-direction column
+  &:nth-child(even)
+    +bp(pc)
+      flex-direction row-reverse
+      .voice-item--comment
+        &:before
+          transform rotate(90deg)
+          left -20.5px
+          right auto
+
+.voice-more
+  margin-top 32px
+  text-align center
+  &--title
+    margin 24px 0
+    +bp(pc)
+      margin 40px 0
+  &--btnwrap
+    +bp(pc)
+      display flex
+      justify-content center
+      margin 0
+    > *
+      +bp(pc)
+        max-width 604px
+      &:not(:last-child)
+        margin-bottom 16px
+        +bp(pc)
+          margin-bottom 0
+          margin-right 40px

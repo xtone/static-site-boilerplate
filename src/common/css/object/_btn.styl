@@ -1,0 +1,153 @@
+btn-base()
+  display inline-flex
+  align-items center
+  justify-content center
+  width auto
+  font-size 1.6rem
+  font-weight bold
+  transition all .3s ease
+  &, &:link, &:visited
+    text-decoration none
+  &:hover
+    text-decoration none
+
+btn-blue()
+  background color-blue
+  color color-white
+  box-shadow (0px 2px 10px rgba(0,0,0,0.2))
+  +bp(pc)
+    font-size 1.8rem
+  &, &:link, &:visited
+    color color-white
+  &:hover
+    background color-blue-hover
+    color color-white
+    box-shadow (0px 2px 10px rgba(0,0,0,0.14))
+
+btn-white()
+  background color-white
+  color color-blue
+  box-shadow (0px 2px 10px rgba(0,0,0,0.12))
+  &, &:link, &:visited
+    color color-blue
+  &:hover
+    background color-white-hover
+    color color-blue
+    box-shadow (0px 1px 10px rgba(0,0,0,0.12))
+    // box-shadow (0px 2px 24px rgba(0,0,0,0.09))
+
+.btn-contact, a.btn-contact
+  btn-base()
+  btn-blue()
+  padding 16px 24px
+  height 56px
+  +bp(pc)
+    padding 16px 32px
+  span
+    position relative
+    padding-left 30px
+    +bp(pc)
+      padding-left 34px
+    &:before
+      content ''
+      position absolute
+      left 0
+      top 0
+      bottom 0
+      margin auto
+      width 20px
+      height 20px
+      background url(/common/img/icon/small/contact.svg) center no-repeat
+      background-size cover
+      +bp(pc)
+        width 24px
+        height 24px
+  &--catch
+    height 64px
+    padding 16px 32px
+    +bp(pc)
+      display flex
+      align-items center
+      height auto
+      width 80px
+      padding 0 24px
+    span
+      font-size 1.8rem
+      letter-spacing 0.028em
+      +bp(pc)
+        -ms-writing-mode tb-rl
+        writing-mode vertical-rl
+        text-orientation upright
+        letter-spacing 0.3em
+        text-align center
+        font-size 2rem
+        padding 92px 0 36px
+      &:before
+        +bp(pc)
+          width 32px
+          height 32px
+          top 40px
+          right 0
+          bottom auto
+
+  &--header
+    height 64px
+    width 100%
+    padding 0
+    box-shadow none
+    +bp(pc)
+      height auto
+      width 118px
+      flex-direction column
+      font-size 1.4rem
+    &:hover
+      box-shadow none
+    span
+      +bp(pc)
+        padding-left 0
+        padding-top 26px
+      &:before
+        +bp(pc)
+          right 0
+          bottom auto
+          width 20px
+          height 20px
+
+.btn-round,
+.btn-square
+  btn-base()
+  btn-white()
+  padding 16px 24px
+  height 56px
+  border-radius 50px
+  span
+    position relative
+    padding-right 22px
+    &:before
+      content ''
+      position absolute
+      right 0
+      top 0
+      bottom 0
+      margin auto
+      width 12px
+      height 12px
+      background url(/common/img/icon/small/arrow_right.svg) center no-repeat
+      background-size cover
+
+.btn-square
+  width 100%
+  height auto
+  border-radius 0
+  font-size 1.8rem
+  padding 16px
+  box-shadow (0px 4px 20px rgba(0,0,0,0.1))
+  &:hover
+    box-shadow (0px 2px 20px rgba(0,0,0,0.08))
+  span
+    width 100%
+    text-align center
+    &:before
+      width 14px
+      height 14px
+

@@ -1,0 +1,162 @@
+.page-heading
+  background color-bg-blue
+  &--inner
+    padding 28px 5.33vw 0
+    text-align center
+    +bp(pc)
+      padding 0
+      display flex
+      align-items center
+      justify-content space-between
+      text-align left
+  img
+    width 70%
+    max-width 320px
+    +bp(pc)
+      margin-top 40px
+  &--text-box
+    display block
+    padding-bottom 28px
+    +bp(pc)
+      padding-bottom 0
+  &--policy-box
+    display flex
+    align-items center
+    justify-content center
+    height 124px
+    +bp(pc)
+      height 226px
+  &--introduction
+    color color-text-blue
+    line-height 2
+    margin-bottom 8px
+    +bp(pc)
+      font-size 1.8rem
+
+.page-article
+  margin-bottom 56px
+  +bp(pc)
+    margin-bottom 120px
+
+.page-section-title
+  text-align center
+  margin-bottom 32px
+  +bp(pc)
+    margin-bottom 56px
+
+.page-section
+  padding 56px 5.33vw
+  +bp(pc)
+    padding 120px 0
+  &--gray
+    background color-bg-grey
+
+.page-anchor-box
+  text-align center
+  max-width 500px
+  margin 0 auto
+  +bp(tablet)
+    max-width none
+.page-anchor
+  display grid
+  grid-template-columns 1fr 1fr
+  margin 0 10px
+  border-bottom 1px solid color-border
+  +bp(tablet)
+    display inline-flex
+    justify-content center
+  &--list
+    padding 10px 0 10px 10px
+    border-bottom 1px solid color-border
+    +bp(tablet)
+      border-bottom none
+    +bp(pc)
+      padding 16px 0
+    &:nth-child(odd)
+      a
+        border-right 1px solid color-border
+      &:last-child
+        grid-column 1 / 3
+        border none
+        a
+          border none
+  &--link,
+  a&--link
+    display block
+    font-weight 700
+    padding-left 24px
+    position relative
+    color color-text-blue
+    text-align left
+    +bp(tablet)
+      padding 10px 22px 10px 32px
+      border-right 1px solid color-border
+    +bp(pc)
+      padding 10px 32px 10px 58px
+      border-right 1px solid color-border
+    &:before
+      content ''
+      position absolute
+      left 0
+      top 0
+      bottom 0
+      margin auto
+      width 10px
+      height 10px
+      background url(/common/img/icon/small/arrow_down.svg) center no-repeat
+      background-size cover
+      +bp(tablet)
+        width 12px
+        height 12px
+        left 8px
+      +bp(pc)
+        left 32px
+    &:hover
+      +bp(pc)
+        color color-blue-hover
+        opacity 1
+      &:before
+        +bp(pc)
+          background url(/common/img/icon/small/arrow_down_hover.svg) center no-repeat
+          background-size cover
+    //     transition all .3s ease
+
+  &--even
+    .page-anchor--list
+      &:last-child,
+      &:nth-last-child(2)
+        border-bottom none
+      &:last-child
+        .page-anchor--link
+          +bp(tablet)
+            border-right none
+  &--even2
+    +bp(tablet)
+      max-width 560px
+    +bp(pc)
+      max-width none
+    .page-anchor
+      display flex
+      +bp(pc)
+        max-width none
+        display inline-flex
+    .page-anchor--list
+      width 100%
+      padding-right 0
+      border-bottom none
+      line-height 1.2
+      +bp(pc)
+        width auto
+      &:last-child
+        .page-anchor--link
+          +bp(tablet)
+            border-right none
+    .page-anchor--link
+      display flex
+      align-items center
+      min-height 54px
+      padding-right 8px
+      +bp(pc)
+        padding-right 32px
+
+

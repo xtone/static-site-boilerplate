@@ -1,0 +1,271 @@
+extends include/_layout
+
+block vars
+  include include/_config
+  - var key = "top"
+  - var page = pages[key]
+
+block contents
+  section
+
+    .l-content.l-content--top
+      .top-catch
+        h1.top-catch-txt
+          .top-catch-txt--sub.title-vertical
+            span サンプル
+            span サンプル
+            span サンプル
+            span サンプル
+          .top-catch-txt--main.title-vertical
+            | サンプルの
+            span.highlight サンプル
+            br
+            | サンプルサンプル講座
+          .top-catch-btn.top-catch-btn--pc
+            a.btn-contact.btn-contact--catch(href="/inquiry/index.html")
+              span まずはお問い合わせ
+
+        .top-catch-img
+          .top-catch-btn.top-catch-btn--sp
+            a.btn-contact.btn-contact--catch(href="/inquiry/index.html")
+              span まずはお問い合わせ
+
+
+
+      .top-intro
+        h2.title-page-heading
+          | サンプル
+          br.sp-block
+          span サンプル
+          | サンプル
+          span サンプル
+          | サンプル
+
+        .top-intro--lead
+          p
+            | サンプル
+            br
+            | サンプルサンプルサンプルサンプル
+            br.tab-none
+            | サンプルサンプルサンプルサンプル
+
+          p
+            | サンプルサンプルサンプルサンプル
+            br.pc-l-none
+            | サンプルサンプルサンプルサンプル
+
+          p
+            | サンプルサンプルサンプルサンプル
+            br.tab-none
+            | サンプルサンプルサンプルサンプル
+            br.pc-l-none
+            b.title-lead サンプルサンプルサンプルサンプル
+              br.pc-l-none
+              span.highlight ビサンプルサンプルサンプルサンプル
+
+          p
+            | サンプルサンプルサンプルサンプル
+            br.tab-none
+            | サンプルサンプルサンプルサンプル
+            br.pc-l-none
+            b.title-lead サンプルサンプルサンプルサンプル
+              br.pc-l-none
+              span.highlight サンプルサンプルサンプルサンプル
+
+          p サンプルサンプルサンプルサンプル
+
+        .top-intro--img
+          img(src="/common/img/ogp/voice.png" alt="")
+
+
+
+      .l-pc-container
+        .top-course
+          .top-course--title-box
+            h2.title-vertical.title-vertical--course
+              span.number 12341
+              | サンプルサンプル
+              br
+              span.top-space サンプルサンプル
+
+          .top-course--item
+            h3.title-section
+              | サンプルサンプル
+              span.sub サンプルサンプル
+
+            p.top-course--txt
+              | サンプルサンプル
+              br
+              b サンプルサンプル
+              br.tab-none
+              b サンプルサンプル
+              br
+              | サンプルサンプル
+
+            img(src="/common/img/ogp/voice.png" alt="")
+
+            a.btn-round(href="/business-planner.html")
+              span 詳しくはこちら
+
+          .top-course--item
+            h3.title-section
+              | サンプルサンプル
+              span.sub サンプルサンプル
+
+            p.top-course--txt
+              | サンプルサンプルサンプルサンプル
+              br
+              b サンプルサンプル
+              br.pc-l-none
+              b サンプルサンプル
+              br
+              | サンプルサンプル
+
+            img(src="/common/img/ogp/voice.png" alt="")
+
+            a.btn-round(href="/data-scientist.html")
+              span 詳しくはこちら
+
+
+      include include/_inc_contact.pug
+
+      .top-point
+        .l-pc-container
+          .top-point--pc-colum
+            .top-point--title-box
+              h2.title-vertical.title-vertical--point-section
+                | サンプルサンプル
+                br
+                span.number 12365
+                span つのポイント
+
+            .top-point-item.top-point-item--01
+              .top-point-item--summary
+                .title-vertical-border
+                  | ポイント
+                  span.number 1
+                .top-point-item--img
+                  img(src="/common/img/ogp/voice.png" alt="")
+
+              .top-point-item--detail
+                .top-point-item--title-box
+                  h3.title-section
+                    span.highlight サンプルサンプル
+                    br.tab-none
+                    | サンプルサンプル
+                    br
+                    | サンプルサンプル
+                p
+                  | サンプルサンプルサンプルサンプルサンプルサンプル
+                  br.pc-block
+                  | サンプルサンプルサンプルサンプルサンプルサンプル
+                  br
+                  | サンプルサンプルサンプルサンプル
+                  br.pc-block
+                  | サンプルサンプルサンプルサンプル
+
+
+          .top-point-item.top-point-item--02
+            .top-point-item--summary
+              .title-vertical-border
+                | ポイント
+                span.number 2
+              .top-point-item--img
+                img(src="/common/img/ogp/voice.png" alt="")
+
+            .top-point-item--detail
+              .top-point-item--title-box
+                h3.title-section
+                  | サンプルサンプル
+                  br.pc-l-none
+                  span.highlight.no-space サンプルサンプル
+                  br.tab-none
+                  span.highlight サンプルサンプル
+                  | は
+                  br
+                  | サンプルサンプルサンプルサンプル
+                  br.tab-none
+                  | サンプルサンプル
+                  br.sp-block
+                  span.highlight.pc-left-space サンプルサンプル
+              p
+                | サンプルサンプルサンプルサンプルサンプルサンプル
+                br.pc-block
+                | サンプルサンプルサンプルサンプルサンプルサンプル
+                br
+                | サンプルサンプルサンプルサンプル
+                br.pc-block
+                | サンプルサンプルサンプルサンプル
+
+
+          .top-point-item.top-point-item--03
+            .top-point-item--summary
+              .title-vertical-border
+                | ポイント
+                span.number 3
+              .top-point-item--img
+                img(src="/common/img/ogp/voice.png" alt="")
+
+            .top-point-item--detail
+              .top-point-item--title-box
+                h3.title-section
+                  | サンプルサンプル
+                  span.highlight.pc-left-space サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
+                  span.annotation ※
+                  br.tab-none
+                  | だから、
+                  br.tab-block
+                  | サンプルサンプル
+                  br.tab-none
+                  span.highlight.pc-left-space サンプルサンプル
+
+              span.supplement xxxxxxx場合
+              p
+                | サンプルサンプルサンプルサンプルサンプルサンプル
+                br.pc-block
+                | サンプルサンプルサンプルサンプルサンプルサンプル
+                br
+                | サンプルサンプルサンプルサンプル
+                br.pc-block
+                | サンプルサンプルサンプルサンプル
+
+
+          .top-point-item.top-point-item--support
+            h3.title-center
+              | サンプルサンプル
+              br.tab-none
+              | サンプルサンプルサンプルサンプルサンプルサンプル
+
+            .top-point--pc-colum
+              .top-point-item--img
+                img(src="/common/img/ogp/voice.png" alt="")
+
+              .top-point-item--detail
+                .top-point-item--title-box
+                  .title-section
+                    | サンプルサンプルサンプルサンプルサンプルサンプル
+                    br
+                    | サンプルサンプルサンプルサンプルサンプルサンプル
+                    br.support-br
+                    span.highlight.pc-l-left-space サンプルサンプルサンプルサンプルサンプルサンプル
+
+                span.supplement 別オプションになります
+                p
+                  | サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
+                  br.pc-max-block
+                  | サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
+
+
+      .l-pc-container
+        .top-more
+
+          .top-more--title
+            .title-center サンプルサンプルサンプルサンプルサンプルサンプル
+
+          .top-more--btnwrap
+            a.btn-square(href="/business-planner.html")
+              span サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
+
+            a.btn-square(href="/data-scientist.html")
+              span サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
+

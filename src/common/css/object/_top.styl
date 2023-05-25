@@ -1,0 +1,261 @@
+.top-catch
+  margin-bottom 72px
+  background color-white
+  +bp(pc)
+    display flex
+    flex-direction row-reverse
+    justify-content space-between
+    margin 96px auto 140px
+  +bp(pc)
+    max-width 1440px
+
+.top-catch-txt
+  display flex
+  flex-direction row-reverse
+  justify-content center
+  padding 32px 32px 16px
+  position relative
+  z-index 2
+  +bp(pc)
+    padding 0 40px 0 18px
+    margin-left -58px
+  +bp(pc-max)
+    margin-left 0
+  &--sub
+    font-size 2.2rem
+    padding-left 8px
+    +bp(pc)
+      font-size 3rem
+      letter-spacing 3px
+    span
+      padding-bottom 4px
+      +bp(pc)
+        padding-bottom 6px
+  &--main
+    color color-black
+    font-size 3.2rem
+    line-height 1.42
+    +bp(pc)
+      font-size 5.6rem
+      letter-spacing 6px
+
+.top-catch-img
+  padding-top 56%
+  background url(/common/img/top/main.png) center center no-repeat
+  background-size cover
+  overflow hidden
+  position relative
+  +bp(pc)
+    background-position right center
+    padding-top 16%
+    width 100%
+    overflow visible
+    max-width 1040px
+
+.top-catch-btn
+  +bp(pc)
+    margin auto 64px 0 0
+  &--sp
+    +bp(pc)
+      display none
+  &--pc
+    display none
+    +bp(pc)
+      display block
+
+
+.top-intro
+  background color-bg-grey
+  padding 48px 5.33vw
+  text-align center
+  +bp(pc)
+     padding 96px 5.33vw
+  &--lead
+    margin 24px 0 48px
+    line-height 2
+    +bp(pc)
+      font-size 1.8rem
+      margin 24px 0 56px
+      letter-spacing 0.02em
+    > *
+      margin-bottom 24px
+  &--img
+    max-width 520px
+    margin 0 auto
+    +bp(tablet)
+      max-width 736px
+
+
+.top-course
+  padding 72px 5.33vw
+  +bp(pc)
+    padding 140px 0
+    display grid
+    grid-template-columns 1fr 168px 1fr
+  +bp(pc-l)
+    grid-template-columns 1fr 204px 1fr
+
+  &--title-box
+    display flex
+    flex-direction row-reverse
+    justify-content center
+    width 168px
+    margin 0 auto
+    border-left 1px solid color-black
+    border-right 1px solid color-black
+    +bp(pc)
+      padding 48px 0
+      grid-row-start 1
+      grid-column-start 2
+    +bp(pc-l)
+      width 204px
+  &--item
+    padding 48px 0
+    text-align center
+    +bp(pc)
+      padding 56px 24px
+    &:not(:last-child)
+      border-bottom 1px solid color-black
+      +bp(pc)
+        border none
+    img
+      display block
+      width 72%
+      margin 0 auto 20px
+      max-width 400px
+      +bp(pc)
+        width 76%
+        margin 0 12% 24px
+  &--txt
+    padding 20px 0
+    +bp(pc)
+      padding 24px 0
+      min-height 156px
+    b
+      font-size 1.8rem
+      letter-spacing 0.04em
+      +bp(pc)
+        font-size 1.7rem
+
+
+.top-point
+  padding 72px 0
+  +bp(pc)
+    padding 140px 0
+  &--title-box
+    display flex
+    flex-direction row-reverse
+    justify-content center
+    margin-bottom 48px
+  &--pc-colum
+    +bp(tablet)
+      display flex
+      flex-direction row-reverse
+      justify-content space-between
+      padding 0 80px
+
+
+.top-point-item
+  padding 0 5.33vw
+  margin 0 auto 48px
+  +bp(tablet)
+    margin-bottom 96px
+  +bp(pc)
+    padding 0 80px
+    max-width none
+  &--summary
+    display flex
+    align-items flex-start
+    margin-bottom 24px
+    +bp(tablet)
+      flex-direction row-reverse
+  &--img
+    max-width 400px
+  &--title-box,
+  .supplement
+    display block
+    margin -8px 0 16px
+
+  &--detail
+    p
+      +bp(pc)
+        letter-spacing 0.04em
+
+  &--01
+    +bp(tablet)
+      padding-top 72px
+      display flex
+      flex-direction column
+      padding-left 0
+    +bp(pc)
+      padding-top 140px
+  &--01,
+  &--03
+    .top-point-item--summary
+      flex-direction row-reverse
+      +bp(tablet)
+        justify-content flex-end
+
+  &--arrow
+    text-align center
+    margin-bottom 24px
+    +bp(pc)
+      margin-bottom 40px
+
+  &--support
+    max-width none
+    padding 0 5.33vw 32px
+    background color-bg-blue
+    margin 0
+    +bp(pc)
+      padding 0
+    .top-point--pc-colum
+      display block
+      +bp(pc)
+        display flex
+        margin-top 40px
+        flex-direction row
+        align-items center
+      +bp(pc-l)
+        padding 0 68px 32px 80px
+    .top-point-item--img
+      width 72%
+      margin 24px auto
+      +bp(pc)
+        margin 0
+        min-width 400px
+        margin-right 32px
+      +bp(pc-l)
+        margin-right 56px
+
+    .support-br
+      display block
+      +bp(tablet)
+        display none
+      +bp(pc)
+        display block
+      +bp(pc-l)
+        display none
+
+
+
+
+.top-more
+  text-align center
+  &--title
+    margin 24px 0
+    +bp(pc)
+      margin 40px 0
+  &--btnwrap
+    margin 0 5.33vw 72px
+    +bp(tablet)
+      display flex
+      margin 0 40px 140px
+    > *
+      &:not(:last-child)
+        margin-bottom 16px
+        +bp(tablet)
+          margin-bottom 0
+          margin-right 40px
+
+

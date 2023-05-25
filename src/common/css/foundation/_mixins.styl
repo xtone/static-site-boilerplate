@@ -1,0 +1,21 @@
+//breakpoint
+bp(bpName)
+  for name in bpName
+    if name == 'se'
+      @media (max-width: breakpoint-se)
+        {block}
+    if name == 'sp'
+      @media (min-width: breakpoint-sp)
+        {block}
+    if name == 'tablet'
+      @media (min-width: breakpoint-tablet)
+        {block}
+    if name == 'pc'
+      @media (min-width: breakpoint-pc)
+        {block}
+    if name == 'pc-l'
+      @media (min-width: breakpoint-pc-l)
+        {block}
+    if name == 'pc-max'
+      @media (min-width: breakpoint-pc-max)
+        {block}

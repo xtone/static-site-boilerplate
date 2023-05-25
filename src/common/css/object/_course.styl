@@ -1,0 +1,364 @@
+// 本講座のゴール ===========
+
+.course-intro
+  padding 56px 5.33vw
+  text-align center
+  +bp(pc)
+    padding 96px 0
+  &--lead-box
+    margin 24px 0 0
+    +bp(pc)
+      margin 48px 0 0
+    > *
+      margin-bottom 24px
+      +bp(pc)
+        margin-bottom 48px
+
+
+// こんな方におすすめ =================================
+
+.course-target
+  background color-bg-grey
+  padding 56px 5.33vw
+  text-align center
+  +bp(pc)
+    padding 120px 0
+  &--title-box
+    margin-bottom 24px
+    +bp(pc)
+      margin-bottom 56px
+    > *
+      margin-bottom 24px
+      +bp(pc)
+        margin-bottom 48px
+
+.course-target-item-wrap
+  +bp(pc)
+    display flex
+    gap 24px
+    padding 0 24px
+  +bp(pc-l)
+    gap 32px
+
+.course-target-item
+  margin 40px auto
+  max-width 580px
+  &:last-child
+    margin-bottom 0
+  +bp(pc)
+    margin 40px 0 0
+    width 100%
+  &--comment
+    padding 20px
+    background color-white
+    border 1px solid color-black
+    position relative
+    margin-bottom 16px
+    text-align left
+    +bp(pc)
+      padding 20px 20px
+      font-size 1.5rem
+      min-height 177px
+    +bp(pc-l)
+      padding 20px 32px
+      font-size 1.6rem
+      min-height 186px
+    &:before
+      content ''
+      position absolute
+      z-index 1
+      left 0
+      right 0
+      bottom -10px
+      margin auto
+      width 20px
+      height 10px
+      background url(/common/img/icon/small/arrow_comment_sp.png) top center no-repeat
+      background-size contain
+      +bp(pc)
+        bottom -13px
+        width 28px
+        height 13px
+        background url(/common/img/icon/small/arrow_comment_pc.png) top center no-repeat
+        background-size contain
+  &--profile
+    display flex
+    align-items center
+    justify-content center
+    gap 12px
+    +bp(pc)
+      gap 20px
+    img
+      width 100px
+  &--arrow
+    width 28px
+    height 14px
+    margin 6px auto
+  &--need
+    position relative
+    padding-top 32px
+    +bp(pc)
+      padding-top 44px
+    &:before
+      content ''
+      position absolute
+      z-index 1
+      left 0
+      right 0
+      top 6px
+      margin auto
+      width 28px
+      height 14px
+      background url(/common/img/icon/big/arrow_large_under.svg) center no-repeat
+      background-size cover
+      +bp(pc)
+        top 16px
+    h5
+      display block
+      font-weight 700
+      font-size 1.2rem
+      +bp(pc)
+        font-size 1.4rem
+        margin-bottom 16px
+    ul
+      display inline-block
+      margin 8px auto 0
+      text-align left
+      li
+        position relative
+        padding-left 12px
+        +bp(pc)
+          padding-left 14px
+          padding-bottom 10px
+          line-height 1.4
+        &:before
+          content '-'
+          position absolute
+          left 0
+          top -2px
+
+.course-target-item-wrap--date-scientist
+  .course-target-item--comment
+    +bp(pc)
+      min-height 150px
+    +bp(pc-l)
+      min-height 154px
+
+// 特徴・概要 =================================
+
+.course-overview
+  padding 56px 5.33vw
+  +bp(pc)
+    padding 120px 0
+  &--title-box
+    text-align center
+    margin-bottom 24px
+    +bp(pc)
+      margin-bottom 48px
+  &--item-wrap
+    border-top 1px solid color-black
+  &--item
+    border-bottom 1px solid color-black
+  &--item-inner
+    padding 32px 3.73vw 32px 5.33vw
+    +bp(pc)
+      display flex
+      align-items center
+      gap 40px
+      padding 48px 28px 48px 36px
+    +bp(pc-l)
+      gap 56px
+      padding 56px
+    .title-page-lead--course-overview
+      +bp(pc)
+        width 400px
+        flex-shrink 0
+    p
+      margin-top 16px
+      letter-spacing 0.02em
+      line-height 2
+
+
+
+// カリキュラム =================================
+
+.course-curriculum
+  background color-bg-grey
+  padding 56px 5.33vw
+  +bp(pc)
+    padding 120px 0
+  &--title-box
+    text-align center
+    +bp(pc)
+      margin-bottom 32px
+
+.course-curriculum-step-wrap
+  margin 0
+
+.course-curriculum-step
+  &:not(:last-child)
+    margin-bottom 24px
+    +bp(pc)
+      margin-bottom 56px
+  &--heading
+    display flex
+    flex-direction column
+    margin-bottom 16px
+    padding-top 24px
+    +bp(pc)
+      flex-direction row
+      align-items flex-end
+      gap 8px
+      margin-bottom 48px
+  &--time
+    font-size 1.6rem
+    font-weight 700
+    position relative
+    padding-left 28px
+    display inline-block
+    margin-left auto
+    +bp(pc)
+      font-size 1.8rem
+      flex-shrink 0
+    &:before
+      content ''
+      position absolute
+      left 0
+      top 0
+      bottom 0
+      margin auto
+      width 18px
+      height 24px
+      background url(/common/img/icon/big/slash.svg) center no-repeat
+      background-size cover
+    .number
+      font-size 2rem
+      padding 0 1px
+      +bp(pc)
+        font-size 2.8rem
+        padding 0 3px
+  &--item-wrap
+    +bp(pc)
+      display grid
+      grid-template-columns 1fr 1fr
+      gap 32px
+      padding-left 6px
+  &--item
+    padding 28px 5.33vw
+    border-top 1px solid color-black
+    border-left 1px solid color-black
+    background color-white
+    &:not(:last-child)
+      margin-bottom 20px
+      +bp(pc)
+        margin-bottom 0
+    +bp(pc)
+      padding 42px 40px
+    +bp(pc-l)
+      padding 56px 48px
+    p
+      line-height 2
+      letter-spacing 0.02em
+  &--title
+    font-weight 700
+    font-size 2rem
+    line-height 1.5
+    margin-bottom 20px
+    +bp(pc)
+      font-size 2.4rem
+      margin-bottom 32px
+  &--subtitle
+    font-weight 700
+    font-size 1.6rem
+    line-height 1.8
+    margin-bottom 20px
+    +bp(pc)
+      margin-bottom 32px
+      width 102%
+
+
+// 日程表 =================================
+
+.course-schedule
+  padding 56px 5.33vw
+  +bp(pc)
+    padding 120px 0
+  &--title-box
+    text-align center
+  &--wrap
+    border 1px solid color-black
+    padding 10px
+    margin-top 24px
+  &--table-wrap
+    margin-right -10px
+    overflow-x scroll
+
+.course-schedule-table
+  margin-right 10px
+  th,td
+    border-collapse collapse
+    border 1px solid color-border
+    padding 10px
+    text-align center
+    vertical-align middle
+  thead
+    th
+      background color-table-blue
+      font-weight 700
+      span
+        font-weight 400
+        font-size 1.2rem
+    .dayof,
+    .class,
+    .charge,
+    .hour,
+    .format
+      width 1px
+      white-space nowrap
+  tbody
+    .year
+      font-weight 700
+      background color-bg-grey
+    .year,
+    .day,
+    .dayof,
+    .time,
+    .hour
+      width 1px
+      white-space nowrap
+    .detail
+      text-align left
+      min-width 240px
+    .class
+      min-width 80px
+    .item,
+    .format
+      min-width 112px
+
+.course-schedule-total-table
+  width 100%
+  margin 20px 0 8px auto
+  border-bottom 2px solid color-border
+  +bp(tablet)
+    width auto
+    margin 40px 0 8px auto
+  tr
+    border-bottom 1px solid color-border
+  th,td
+    border-collapse collapse
+    padding 10px
+    vertical-align middle
+    font-weight 400
+    text-align right
+  th
+    width 1px
+    white-space nowrap
+  td
+    +bp(tablet)
+      min-width 200px
+  tr.total
+    th
+      background color-bg-grey
+    td
+      font-weight 700
+

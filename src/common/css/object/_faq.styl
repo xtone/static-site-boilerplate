@@ -1,0 +1,98 @@
+.faq-section
+  border-top 1px solid color-black
+.faq-item
+  border-bottom 1px solid color-border
+  text-align left
+  background color-white
+
+.question
+  cursor pointer
+  display block
+  width 100%
+  height 100%
+  padding 20px 52px 20px 16px
+  position relative
+  z-index 1
+  font-weight 700
+  color color-text-blue
+  +bp(pc)
+    font-size 1.8rem
+    padding 32px 64px 32px 24px
+    transition all .3s ease
+  &:after
+    content ""
+    position absolute
+    top 0
+    bottom 0
+    right 16px
+    margin auto
+    width 16px
+    height 16px
+    background url(/common/img/icon/small/arrow_down.svg) center center no-repeat
+    background-size cover
+    transition all .3s linear
+    +bp(pc)
+      right 32px
+  span
+    display flex
+    gap 16px
+    +bp(pc)
+      gap 24px
+    &:before
+      content "Q"
+      font-size 2.2rem
+      line-height 1.2
+      color color-text-blue
+      display block
+      flex-shrink 0
+      transition all .3s ease
+      +bp(pc)
+        font-size 3rem
+        line-height 1
+  &:hover
+    +bp(pc)
+      color color-blue-hover
+      transition all .3s ease
+    &:after
+      +bp(pc)
+        background url(/common/img/icon/small/arrow_down_hover.svg) center center no-repeat
+        background-size cover
+    span
+      &:before
+        +bp(pc)
+          color color-blue-hover
+          transition all .3s ease
+  &.open
+    &:after
+      transform rotate(-180deg)
+      transition all .3s linear
+      
+.answer
+  padding 16px
+  margin 10px 0 20px
+  font-size 1.2rem
+  background color-bg-grey
+  border-bottom 1px solid color-border-grey
+  display none
+  +bp(pc)
+    padding 24px
+    font-size 1.6rem
+    margin 0px 24px 32px 70px
+  span
+    display flex
+    gap 16px
+    +bp(tablet)
+      min-height 26px
+      line-height 2
+    +bp(pc)
+      gap 24px
+    &:before
+      content "A"
+      display block
+      flex-shrink 0
+      font-weight 700
+      font-size 2.2rem
+      line-height 1.2
+      +bp(pc)
+        font-size 3rem
+        line-height 1

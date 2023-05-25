@@ -1,0 +1,283 @@
+h1, h2, h3, h4, h5
+  line-height 1.4
+  +bp(pc)
+    line-height 1.75
+
+.title-vertical
+  -ms-writing-mode tb-rl
+  writing-mode vertical-rl
+  text-orientation upright
+  font-weight 700
+  font-size 2.8rem
+  letter-spacing 2px
+  +bp(pc)
+    font-size 4.4rem
+    letter-spacing 0.14em
+  .number
+    font-size 128%
+    margin-bottom -4px
+  .highlight
+    background color-highlight
+    padding 4px 2px
+    margin-top 2px
+  &--course
+    +bp(pc)
+      line-height 1.28
+    .top-space
+      padding-top 40px
+      +bp(pc)
+        padding-top 64px
+  &--point-section
+    .number
+      padding-top 56px
+      +bp(pc)
+        padding-top 136px
+
+
+.title-vertical-border
+  -ms-writing-mode tb-rl
+  writing-mode vertical-rl
+  text-orientation upright
+  position relative
+  padding 24px 0 20px
+  font-weight 700
+  font-size 2rem
+  letter-spacing 2px
+  +bp(pc)
+    padding 48px 0 40px
+    font-size 3.2rem
+    letter-spacing 0.14em
+  .number
+    padding 0
+    margin 0 -8px
+    font-size 4.8rem
+    +bp(pc)
+      font-size 7.2rem
+  &:before
+  &:after
+    content ''
+    position absolute
+    right 0
+    left 0
+    margin auto
+    width 4px
+    height 16px
+    border 1px solid color-black
+    border-radius 8px
+    +bp(pc)
+      width 6px
+      height 32px
+  &:before
+    top 0
+  &:after
+    bottom 0
+
+
+.title-hero-heading
+  font-weight 700
+  font-size 3.2rem
+  letter-spacing 0.08em
+  +bp(pc)
+    font-size 4.4rem
+
+
+.title-page-heading
+  font-weight 700
+  font-size 2.8rem
+  letter-spacing 0.08em
+  +bp(pc)
+    font-size 3.6rem
+  span
+    font-size 3rem
+    padding-right 1px
+    letter-spacing 0.1em
+    +bp(pc)
+      font-size 4rem
+
+
+.title-section
+  font-weight 700
+  font-size 2.4rem
+  letter-spacing 0.04em
+  line-height 1.6
+  +bp(pc)
+    font-size 3rem
+    line-height 1.8
+  .sub
+    display block
+    font-size 2rem
+    +bp(pc)
+      font-size 2.4rem
+  .highlight
+    background color-highlight
+    padding 4px 0
+    margin 0 4px -4px 0
+    margin 0 4px 0 0
+  .no-space
+    margin-right 0
+  .pc-left-space
+    +bp(pc)
+      margin-left 4px
+  .pc-l-left-space
+    +bp(pc-l)
+      margin-left 4px
+  .annotation
+    vertical-align top
+    font-weight 200
+    font-size 1.2rem
+    padding-left 4px
+
+
+.title-lead
+  font-weight 700
+  font-size 1.6rem
+  line-height 2
+  +bp(pc)
+    font-size 1.8rem
+    letter-spacing 0.04em
+  +bp(pc-l)
+    font-size 2.2rem
+    margin 0 4px
+  .highlight
+    font-size 1.8rem
+    background color-highlight
+    padding 4px 8px
+    margin-bottom -4px
+    letter-spacing 0.04em
+    +bp(pc-l)
+      font-size 2.2rem
+      margin 0 2px
+  &--curriculum
+    line-height 1.8
+    font-size 1.8rem
+    .highlight
+      font-size 2rem
+      +bp(pc)
+        font-size 3rem
+        padding 4px 1px
+        margin-right 2px
+    .no-margin
+      +bp(pc)
+        margin-right -2px
+
+
+
+.title-page-lead
+  font-weight 700
+  font-size 1.8rem
+  line-height 2
+  position relative
+  +bp(pc)
+    font-size 2.4rem
+    letter-spacing 0.04em
+  .highlight
+    font-size 1.8rem
+    padding 0 1px
+    letter-spacing 0.04em
+    position relative
+    z-index 1
+    +bp(pc)
+      font-size 2.4rem
+    &:after
+      content ''
+      position absolute
+      z-index -1
+      left 0
+      right 0
+      bottom -2px
+      margin auto
+      height 8px
+      width 100%
+      background color-highlight
+  &--brackets
+    padding 8px
+    letter-spacing 0.04em
+    line-height 1.7
+    +bp(pc)
+      display inline-block
+      padding 16px 40px
+    &:before,
+    &:after
+      content ''
+      position absolute
+      width 24px
+      height 24px
+      +bp(pc)
+        width 48px
+        height 48px
+    &:before
+      top 0
+      left 0
+      border-top 1px solid color-black
+      border-left 1px solid color-black
+    &:after
+      bottom 0
+      right 0
+      border-bottom 1px solid color-black
+      border-right 1px solid color-black
+  &--course-overview
+    line-height 1.6
+    width 102%
+    +bp(pc)
+      width 100%
+  &--course-curriculum
+    line-height 1.6
+    .highlight
+      font-size 2rem
+
+
+.title-center
+  font-weight 700
+  text-align center
+  font-size 2rem
+  letter-spacing 0.04em
+  +bp(pc)
+    font-size 2.4rem
+    
+
+.title-border
+  display inline-block
+  position relative
+  padding 0 38px
+  margin 0 auto
+  font-weight 700
+  font-size 1.8rem
+  letter-spacing 0.02em
+  +bp(pc)
+    font-size 2rem
+  &:before
+  &:after
+    content ''
+    position absolute
+    top 0
+    bottom 0
+    margin auto
+    width 16px
+    height 4px
+    border 1px solid color-black
+    border-radius 8px
+    +bp(pc)
+      width 24px
+      height 5px
+  &:before
+    left 0
+  &:after
+    right 0
+
+.title-poricy
+  font-weight 700
+  font-size 2.2rem
+  text-align left
+  display flex
+  +bp(pc)
+    font-size 3rem
+  .number
+    font-size 4rem
+    padding-right 8px
+    line-height 0.5
+    +bp(pc)
+      font-size 6.4rem
+      padding-right 20px
+
+
+

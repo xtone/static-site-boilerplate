@@ -1,0 +1,25 @@
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+title #{page.title}
+
+meta(content=page.description, name="description")
+meta(content=page.keywords, name="keywords")
+
+meta(content="website", property="og:type")
+meta(content=page.title, property="og:title")
+meta(content=page.description, property="og:description")
+meta(content=domain, property="og:url")
+meta(content=domain + page.image, property="og:image")
+meta(content=site_name, property="og:site_name")
+meta(content="ja_JP", property="og:locale")
+meta(name="format-detection" content="telephone=no")
+
+link(rel="stylesheet" href=css_path+"/style.css")
+
+link(rel="shortcut icon" href="/common/img/favicon.ico")
+link(rel="apple-touch-icon" href="/common/img/apple-touch-icon.png")
+link(rel="icon" type="image/png" href="/common/img/android-chrome-192x192.png")
+
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+script(src=js_path+"/index.js")
