@@ -1,7 +1,7 @@
 import del from 'del'
 import gulp from 'gulp'
 import gulpSass from 'gulp-sass'
-import nodeSass from 'node-sass'
+import dartSass from 'sass'
 import gulpStylus from 'gulp-stylus'
 import gulpPug from 'gulp-pug'
 import plumber from 'gulp-plumber'
@@ -11,7 +11,7 @@ import webpack from 'webpack-stream'
 import webpackConfig from './webpack.config'
 
 const bs = browser.create()
-gulpSass.compiler = nodeSass
+const sassCompiler = gulpSass(dartSass);
 
 const clean = () => del('./dest')
 
@@ -28,7 +28,7 @@ const stylus = () => {
 const sass = () => {
   return gulp.src('./src/**/*.sass')
     .pipe(plumber())
-    .pipe(gulpSass())
+    .pipe(sassCompiler())
     .pipe(gulp.dest('dest'))
     .pipe(bs.stream({once: true}))
 }
