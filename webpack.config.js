@@ -1,12 +1,8 @@
-import webpack from 'webpack-stream'
 import path from 'path'
-const src = path.join(__dirname, 'src')
 const dest = path.join(__dirname, 'dest')
 
 module.exports = {
   mode: 'development',
-
-  entry: path.join(src, 'js/index.js'),
 
   output: {
     path: path.join(dest, 'js'),
@@ -17,19 +13,16 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        use: [{ loader: 'babel-loader' }]
-      }
-    ]
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              // プリセットを指定することで、ES5 に変換
+              "@babel/preset-env",
+            ],
+          },
+        }],
+      },
+    ],
   },
-
-  plugins: [
-    new webpack.webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-  ],
-
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    },
-    extensions: ['.js']
-  }
 }

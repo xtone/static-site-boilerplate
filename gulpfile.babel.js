@@ -1,17 +1,18 @@
 import del from 'del'
 import gulp from 'gulp'
 import gulpSass from 'gulp-sass'
-import nodeSass from 'node-sass'
+import dartSass from 'sass'
 import gulpStylus from 'gulp-stylus'
 import gulpPug from 'gulp-pug'
 import plumber from 'gulp-plumber'
 import browser from 'browser-sync'
-import webpack from 'webpack-stream'
+import webpack from 'webpack'
+import webpackStream from 'webpack-stream'
 
 import webpackConfig from './webpack.config'
 
 const bs = browser.create()
-gulpSass.compiler = nodeSass
+const sassCompiler = gulpSass(dartSass);
 
 const clean = () => del('./dest')
 
@@ -28,7 +29,7 @@ const stylus = () => {
 const sass = () => {
   return gulp.src('./src/**/*.sass')
     .pipe(plumber())
-    .pipe(gulpSass())
+    .pipe(sassCompiler())
     .pipe(gulp.dest('dest'))
     .pipe(bs.stream({once: true}))
 }
@@ -36,7 +37,7 @@ const sass = () => {
 const html = () => gulp.src('./src/**/*.html').pipe(gulp.dest('./dest')).pipe(bs.stream({once: true}))
 
 const pug = () => {
-  return gulp.src('./src/**/*.pug')
+  return gulp.src(['./src/**/*.pug', '!./src/**/_*.pug'])
     .pipe(plumber())
     .pipe(gulpPug({ pretty: true }))
     .pipe(gulp.dest('./dest'))
@@ -46,10 +47,12 @@ const pug = () => {
 const js = () => gulp.src('./src/**/*.js').pipe(gulp.dest('./dest')).pipe(bs.stream({once: true}))
 
 const es6 = () => {
-  return webpack(webpackConfig)
-    .on('error', function (e){
-      this.emit('end')
-    })
+  return gulp
+    .src([
+      './src/js/index.js',
+    ])
+    .pipe(plumber())
+    .pipe(webpackStream(webpackConfig, webpack))
     .pipe(gulp.dest('./dest'))
     .pipe(bs.stream({once: true}))
 }
