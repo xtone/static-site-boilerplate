@@ -1,3 +1,5 @@
+import "../css/style.styl";
+
 //- ドロワー開閉
 $(function(){
   $('.menu-trigger').on('click', function() {
