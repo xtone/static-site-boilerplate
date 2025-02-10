@@ -2,54 +2,84 @@
 
 静的サイトを開発するためのひな型となるプロジェクトです。
 
-## prerequisite
+## 必要環境
 
-- nodejs
-  - 14系で動作確認。16でも多分大丈夫
-- yarn
+- Node.js 22以上
+- npm
 
-## getting start
+## はじめ方
 
-- このプロジェクトをcloneして新しいプロジェクトを作成します
-  - `.git`ディレクトリを削除した後、新しく`git init`を実行して新しいプロジェクトとして作成します
-- `package.json`の`name`と`repository`をプロジェクトごとに正しい値に設定します
-- `.circleci/config.yml.sample`内の環境変数を正しい値に設定し、`.circleci/config.yml`にリネームします
-  - masterブランチにpushしたとき以外にデプロイ等を行いたい場合は追記します
+1. このプロジェクトをcloneして新しいプロジェクトを作成
+   - `.git`ディレクトリを削除した後、新しく`git init`を実行
+2. `package.json`の`name`を適切な値に設定
+3. 依存パッケージのインストール
+   ```bash
+   npm install
+   ```
 
 ## ディレクトリ構成
 
 ```
 .
-├── gulpfile.js
-├── package.json
-├── README.md
-└── src
+├── src/           # ソースファイル
+│   ├── common/    # 共通ファイル
+│   │   ├── css/   # スタイルシート
+│   │   ├── img/   # 画像ファイル
+│   │   └── js/    # JavaScript
+│   ├── include/   # Pugインクルード
+│   └── *.pug      # ページテンプレート
+├── dest/          # ビルド出力（自動生成）
+├── vite.config.js # Vite設定
+└── package.json
 ```
-
-src内に配置した各ファイルと同じ構造でbuild時にdestディレクトリに書き込まれます。
-各ファイルは拡張子ごとにビルドが行われます。対応している拡張子は以下に別途記載。
 
 ## 対応フォーマット
 
-- css
-  - *.css
-  - *.sass
-  - *.styl
-- html
-  - *.html
-  - *.pug
-- js
-  - *.js
-  - *.es6
-- image
-  - *.jpg
-  - *.png
-  - *.gif
+- スタイルシート
+  - .css（そのまま出力）
+  - .styl（Stylus）
+  - .sass/.scss（Sass）
+- HTML
+  - .pug（コンパイル後出力）
+  - .html（そのまま出力）
+- JavaScript
+  - .js（モダンブラウザ向けにビルド）
+- 画像
+  - .jpg, .png, .gif, .svg, .webp
+  - .ico（ファビコン）
 
-## 利用方法
+## コマンド
 
+```bash
+# 開発サーバーの起動
+npm run dev
+
+# プロダクション用ビルド
+npm run build
+
+# ビルドしたファイルのプレビュー
+npm run preview
+
+# コードフォーマット
+npm run format
+
+# コードチェック
+npm run lint
 ```
-yarn install
-yarn build   # ビルド実行
-yarn watch   # 開発サーバー起動
-```
+
+## 開発の流れ
+
+1. `npm install` で必要なパッケージをインストール
+2. `npm run dev` で開発サーバーを起動
+3. `src` ディレクトリ内のファイルを編集
+4. 変更は自動的に反映されます（HMR対応）
+5. コミット前に `npm run format` でコード整形
+
+## ビルド仕様
+
+- `src` ディレクトリ内のファイルは構造を保ったまま `dest` に出力
+- Pugの `_` で始まるファイルはビルド対象外（インクルード用）
+- JavaScriptは自動的にモダンブラウザ用にビルド
+- CSS/Stylusファイルは `dest/common/css/` に出力
+- 画像ファイルは `dest/common/img/` に出力
+- JavaScriptファイルは `dest/common/js/` に出力
